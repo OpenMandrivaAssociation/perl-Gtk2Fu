@@ -8,7 +8,6 @@ Group:		Development/Perl
 Summary:    GTK2 Forked Ultimate, a powerful layer on top of Gtk2. (forked from ugtk2.)
 Source0:    http://search.cpan.org/CPAN/authors/id/D/DA/DAMS/Gtk2Fu-0.10.tar.bz2
 Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel, perl-Gtk2
 BuildArch: noarch
 
