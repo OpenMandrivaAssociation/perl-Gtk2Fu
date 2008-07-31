@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:    0.10
-Release:    %mkrel 3
+Release:    %mkrel 5
 License:	GPL
 Group:		Development/Perl
 Summary:    GTK2 Forked Ultimate, a powerful layer on top of Gtk2. (forked from ugtk2.)
