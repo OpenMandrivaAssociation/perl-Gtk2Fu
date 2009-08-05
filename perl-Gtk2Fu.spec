@@ -1,16 +1,19 @@
-%define realname   Gtk2Fu
+%define upstream_name    Gtk2Fu
+%define upstream_version 0.10
 
-Name:		perl-%{realname}
-Version:    0.10
-Release:    %mkrel 5
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    GTK2 Forked Ultimate, a powerful layer on top of Gtk2. (forked from ugtk2.)
 License:	GPL
 Group:		Development/Perl
-Summary:    GTK2 Forked Ultimate, a powerful layer on top of Gtk2. (forked from ugtk2.)
-Source0:    http://search.cpan.org/CPAN/authors/id/D/DA/DAMS/Gtk2Fu-0.10.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel, perl-Gtk2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/D/DA/DAMS/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires:	perl-Gtk2
 BuildArch: noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 gtk2-fu is a layer on top of perl gtk2, that brings power, simplicity
@@ -20,7 +23,7 @@ brings you a lot of derivated methods from existing methods, that does
 exactly the same thing, except that ir returns the widget.
 
 %prep
-%setup -q -n Gtk2Fu-0.10 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,4 +44,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
