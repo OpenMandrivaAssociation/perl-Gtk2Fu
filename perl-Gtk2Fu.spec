@@ -1,17 +1,18 @@
 %define upstream_name    Gtk2Fu
-%define upstream_version 0.10
+%define upstream_version 0.11
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
 
-Summary:    GTK2 Forked Ultimate, a powerful layer on top of Gtk2. (forked from ugtk2.)
+Summary:    GTK2 Forked Ultimate, a powerful layer on top of Gtk2 (forked from ugtk2)
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://search.cpan.org/CPAN/authors/id/D/DA/DAMS/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://search.cpan.org/CPAN/authors/id/D/DA/DAMS/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-Gtk2
+
 BuildArch: noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
@@ -30,7 +31,7 @@ exactly the same thing, except that ir returns the widget.
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
