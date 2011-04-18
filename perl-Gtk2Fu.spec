@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    GTK2 Forked Ultimate, a powerful layer on top of Gtk2 (forked from ugtk2)
 License:	GPL
