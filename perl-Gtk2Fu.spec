@@ -1,15 +1,13 @@
 %define upstream_name    Gtk2Fu
-%define upstream_version 0.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.11
+Release:	7
 
 Summary:	GTK2 Forked Ultimate, a powerful layer on top of Gtk2 (forked from ugtk2)
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Gtk2Fu
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAMS/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAMS/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ brings you a lot of derivated methods from existing methods, that does
 exactly the same thing, except that ir returns the widget.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -53,9 +51,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Aug 05 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.100.0-1mdv2010.0
 + Revision: 410070
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.10-5mdv2009.0
+- rebuild using %0.11 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.10-5mdv2009.0
 + Revision: 257158
 - rebuild
 
