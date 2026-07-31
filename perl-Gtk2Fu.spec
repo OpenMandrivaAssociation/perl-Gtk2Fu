@@ -1,7 +1,8 @@
 %define upstream_name    Gtk2Fu
+%define upstream_version 0.11
 Name:		perl-%{upstream_name}
 Version:	0.11
-Release:	1
+Release:	2
 
 Summary:	GTK2 Forked Ultimate, a powerful layer on top of Gtk2 (forked from ugtk2)
 License:	GPL
