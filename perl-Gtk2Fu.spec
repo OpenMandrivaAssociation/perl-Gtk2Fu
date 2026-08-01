@@ -2,7 +2,7 @@
 %define upstream_version 0.11
 Name:		perl-%{upstream_name}
 Version:	0.11
-Release:	2
+Release:	3
 
 Summary:	GTK2 Forked Ultimate, a powerful layer on top of Gtk2 (forked from ugtk2)
 License:	GPL
@@ -30,6 +30,7 @@ exactly the same thing, except that ir returns the widget.
 perl Makefile.PL INSTALLDIRS=vendor
 %make_build
 %check
+make test || :
 %make test || :
 
 %install
